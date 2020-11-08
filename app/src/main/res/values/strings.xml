@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">doan3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="catalog_fragment">catalog fragment</string>
+    <string name="thoitrang_fragment">thoitrabg fragment</string>
+    <string name="amthuc_fragment">amthuc fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+<!--        <pl.droidsonroids.gif.GifTextView-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:background="@drawable/chimcachcut"/>-->
+        <ImageView
+            android:gravity="center"
+            android:src="@drawable/baomoi"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:gravity="center"
+                android:textSize="55dp"
+                android:textStyle="normal"
+                android:textColor="#FFB300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BÁO HAY"/>
+            <TextView
+                android:textColor="#E53935"
+                android:textSize="18dp"
+                android:text="App đọc báo hiểu bạn nhất"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+            />
+    </LinearLayout>
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_marginTop="175dp"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/milion"/>
+
+
+</LinearLayout>

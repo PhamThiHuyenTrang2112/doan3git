@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1111">
+    <include layout="@layout/taoaction" />
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18dp"
+        android:text="-  Ứng dụng đọc báo là ứng dụng hỗ trợ bạn tìm kiếm tin tức Online trên mạng một cách dễ dàng thuận tiên . Bạn có thể lưu tin tức để có thể đọc lại tin khi không có mạng."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="18dp"
+        android:text="- Ứng dụng giúp chúng ta xem được tin tức một cách dễ dàng các tin báo luôn được cập nhật mới nhất"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/vientext"
+        android:textSize="18dp"
+        android:text="- Các file lưu tin được lưu trên bộ nhớ thiết bị"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/vientext"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:text="Lưu ý:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:textSize="18dp"
+            android:text="Bạn cần kết nối Internet khi xem tin tức"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

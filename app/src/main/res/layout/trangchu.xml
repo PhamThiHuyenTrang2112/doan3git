@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerlayout"
+    >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/actionbar"
+            android:background="#78b43d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:paddingTop="15dp"
+                android:id="@+id/bMenu"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="#78b43d"
+                android:scaleType="fitXY"
+                android:src="@drawable/menuhin" />
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/edttimkiem"
+               android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:background="@drawable/botroneditext"
+                android:layout_toRightOf="@id/bMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_below="@id/bMenu"
+                app:tabUnboundedRipple="false"
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#78b43d"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/red"
+                app:tabTextColor="@color/white"
+                tools:ignore="MissingConstraints"
+                />
+            <ListView
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/edttimkiem"
+                android:id="@+id/listviewtrangtru"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/actionbar"
+            android:layout_marginTop="-4dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+        </androidx.viewpager.widget.ViewPager>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        >
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:layout_marginTop="40dp"
+                android:id="@+id/imAnhdocbao"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/docbao"
+               ></ImageView>
+            <ImageView
+                android:src="@drawable/tasklist"
+                android:layout_below="@+id/imAnhdocbao"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                 />
+
+            <Button
+                android:onClick="Save"
+                android:id="@+id/bYeuThich"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/imAnhdocbao"
+                android:background="@null"
+                android:paddingLeft="-5dp"
+                android:text="Danh sách tin lưu"
+                android:textAllCaps="false" />
+            <ImageView
+                android:src="@drawable/info"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/bYeuThich"
+                android:background="@null"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                 />
+
+            <Button
+                android:onClick="thongtin"
+                android:id="@+id/bThongtin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/bYeuThich"
+                android:background="@null"
+                android:paddingLeft="-5dp"
+                android:text="Thông tin ứng dụng"
+                android:textAllCaps="false" />
+            <ImageView
+                android:src="@drawable/bookmark"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/bThongtin"
+                android:background="@null"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                  />
+
+            <Button
+                android:onClick="huongdan"
+                android:id="@+id/bHuongdan"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/bThongtin"
+                android:background="@null"
+                android:paddingLeft="-5dp"
+                android:text="Hướng dẫn sử dụng"
+                android:textAllCaps="false" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
