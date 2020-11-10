@@ -7,7 +7,7 @@
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="560dp"/>
+        android:layout_height="625dp"/>
     <LinearLayout
         android:layout_below="@+id/webview"
         android:orientation="horizontal"
@@ -19,7 +19,7 @@
             android:text="Chia sẻ"
             android:onClick="Share"
             android:layout_width="136dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="70dp"/>
         <Button
             android:id="@+id/btnluu"
             android:drawableLeft="@drawable/save_48"
