@@ -2,11 +2,48 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1111">
     <include layout="@layout/taoaction"/>
 
     <TextView
-        android:text="Để đọc báo online thì thiết bị cần kết nối Internet"
+        android:padding="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18dp"
+        android:text="Cần có kết nối Internet để đọc được báo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18dp"
+        android:text="Muốn xem chi tiết tin tức click vào tin tức đó để xem chi tiết"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18dp"
+        android:text="Muốn lưu tin tức click vào button lưu tin tức sẽ được lưu lại hoặc muốn chia sẻ tin tức tin tức sẽ được chia sẻ lên face"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="10dp"
+        android:background="@drawable/vientext"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:textSize="18dp"
+        android:text="Để tìm kiếm tin tức người dùng nhập thông tin cần tìm kiếm trên thanh tìm kiếm để tìm thông tin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
