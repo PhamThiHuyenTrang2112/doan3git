@@ -27,6 +27,9 @@
                 android:src="@drawable/menuhin" />
 
             <EditText
+                android:hint="Nhập từ khóa..."
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
                 android:singleLine="true"
                 android:id="@+id/edttimkiem"
                android:layout_marginTop="15dp"
@@ -34,14 +37,15 @@
                 android:background="@drawable/botroneditext"
                 android:layout_toRightOf="@id/bMenu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="25dp"/>
 
             <com.google.android.material.tabs.TabLayout
+
                 android:layout_below="@id/bMenu"
                 app:tabUnboundedRipple="false"
                 android:id="@+id/tab"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="35dp"
                 android:background="#78b43d"
                 app:tabGravity="fill"
                 app:tabMode="scrollable"
