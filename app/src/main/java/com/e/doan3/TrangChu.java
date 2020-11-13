@@ -163,6 +163,11 @@ public class TrangChu extends AppCompatActivity {
         startActivity(it);
     }
 
+    public void lichsu(View view) {
+        Intent it=new Intent(TrangChu.this,lichsu.class);
+        startActivity(it);
+    }
+
     class MyTask extends AsyncTask<String, Void, ArrayList<tintuc>> {
 
         @Override
