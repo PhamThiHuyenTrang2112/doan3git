@@ -2,12 +2,9 @@ package com.e.doan3;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -16,9 +13,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class chitiettintuc extends AppCompatActivity {
@@ -28,7 +22,7 @@ public class chitiettintuc extends AppCompatActivity {
 
     Button trove,luutin;
     ArrayList<tintuc> arr;
-//    private String filename = "tintuc.txt";
+    //    private String filename = "tintuc.txt";
 //    private String filepath = "coder.vm";
 //    File myInternalFile;
 //    SharedPreferences sharedPreferences;
