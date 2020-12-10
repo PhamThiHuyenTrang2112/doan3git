@@ -18,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TrangChu"></activity>
         <activity android:name=".chitiettintuc"></activity>
+        <activity android:name=".TrangChu"></activity>
         <activity android:name=".luutintuc"/>
         <activity android:name=".thongtinud"/>
         <activity android:name=".huongdansdung"/>
+        <activity android:name=".lichsu"></activity>
 
 
     </application>

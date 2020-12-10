@@ -1,6 +1,8 @@
 package com.e.doan3;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -12,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -26,6 +29,8 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class tintrongngayFragment extends Fragment {
+    public static String DATABASE_NAME = "tintuc.sqlite";
+    SQLiteDatabase database1;
     public static ListView trangtttrongngay;
     public static CustemAdapter adapter;
     ArrayList<tintuc> arr = new ArrayList<>();
@@ -52,6 +57,22 @@ public class tintrongngayFragment extends Fragment {
                 intent.putExtra("link",arr.get(position));
 //                intent.putExtra("link",arr.get(position).getLink());
                 startActivity(intent);
+                final tintuc tintuc1= (com.e.doan3.tintuc) intent.getSerializableExtra("link");
+                String tieude=tintuc1.tieude;
+                String anh=tintuc1.anh;
+                String duongdan=tintuc1.link;
+                String tgcapnhat=tintuc1.thoigiancn;
+
+                database1 = Database.initDatabase(getActivity(), DATABASE_NAME);
+                ContentValues ct = new ContentValues();
+                ct.put("Tieude",tieude);
+                ct.put("Anh",anh);
+                ct.put("Link",duongdan);
+                ct.put("ThoiGian",tgcapnhat);
+
+                database1.insert("history", null, ct);
+//               // Toast.makeText(chitiettintuc.this,"Bạn đã lưu tin tức",Toast.LENGTH_SHORT).show();
+
             }
         });
 

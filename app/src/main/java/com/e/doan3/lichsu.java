@@ -1,10 +1,16 @@
 package com.e.doan3;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +20,7 @@ import java.util.ArrayList;
 
 public class lichsu extends AppCompatActivity {
     Toolbar toolbar;
+    int pos;
     CustemAdapter adapter;
     public static String DATABASE_NAME = "tintuc.sqlite";
     SQLiteDatabase database1;
@@ -31,6 +38,15 @@ public class lichsu extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
         readata();
+        xemls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                pos=position;
+                Intent intent=new Intent(lichsu.this,chitiettintuc.class);
+                intent.putExtra("link",arr.get(pos));
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -65,4 +81,31 @@ public class lichsu extends AppCompatActivity {
 //        }
     }
 
+    public void Xoa(View view) {
+        final AlertDialog.Builder al = new AlertDialog.Builder(lichsu.this);
+        al.setTitle("Thông Báo");
+        al.setMessage("Bạn có chắc chắn muốn xóa hết lịch sử này ?");
+        al.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+               // String tieude = arr.get(pos).tieude;
+                database1 = Database.initDatabase(lichsu.this, DATABASE_NAME);
+                String sql = "Delete from history";
+                database1.execSQL(sql);
+//                database1.delete("TinTuc",)
+                readata();
+                adapter.notifyDataSetChanged();
+                Toast.makeText(lichsu.this,"Bạn xóa thành công",Toast.LENGTH_SHORT).show();
+            }
+        });
+        al.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+                Toast.makeText(lichsu.this,"Bạn đã không xóa!!",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        al.create().show();
+    }
 }
