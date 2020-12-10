@@ -37,5 +37,4 @@ public class Database  {
         }
         return activity.openOrCreateDatabase(databaseName, Context.MODE_PRIVATE, null);
     }
-
 }
