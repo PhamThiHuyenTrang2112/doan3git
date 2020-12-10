@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE androidx.drawerlayout.widget.DrawerLayout>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -72,11 +72,6 @@
             android:layout_marginTop="-4dp"
             android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
         </androidx.viewpager.widget.ViewPager>
     </RelativeLayout>
     <RelativeLayout
@@ -109,7 +104,7 @@
 
             <Button
                 android:onClick="Save"
-                android:id="@+id/bYeuThich"
+                android:id="@+id/btnluu"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_below="@+id/imAnhdocbao"
@@ -118,10 +113,30 @@
                 android:text="Danh sách tin lưu"
                 android:textAllCaps="false" />
             <ImageView
+                android:src="@drawable/history"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/btnluu"
+                android:background="@null"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                />
+
+            <Button
+                android:onClick="lichsu"
+                android:id="@+id/btnhistory"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/btnluu"
+                android:background="@null"
+                android:paddingLeft="-5dp"
+                android:text="Lịch sử tin đã đọc"
+                android:textAllCaps="false" />
+            <ImageView
                 android:src="@drawable/info"
                 android:layout_width="70dp"
                 android:layout_height="60dp"
-                android:layout_below="@id/bYeuThich"
+                android:layout_below="@id/btnhistory"
                 android:background="@null"
                 android:padding="15dp"
                 android:scaleType="fitCenter"
@@ -132,7 +147,7 @@
                 android:id="@+id/bThongtin"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_below="@id/bYeuThich"
+                android:layout_below="@id/btnhistory"
                 android:background="@null"
                 android:paddingLeft="-5dp"
                 android:text="Thông tin ứng dụng"
